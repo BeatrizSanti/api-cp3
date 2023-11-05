@@ -2,26 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .link-cabecalho {
+    @apply block xl:p-5 sm:p-2 md:p-3 hover:bg-amber-400 transition-all duration-500 ease-out rounded font-bold;
   }
+
+  .rodape {
+    @apply bg-gray-800 text-white h-16 static w-full bottom-0;
+  }
+
+  .card-eletro-view {
+    @apply bg-slate-500;
+
+    & ul{
+      @apply flex flex-row flex-wrap justify-center;
+    }
+
+  }
+} 
+
+/* style.css */
+
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.image-modal img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.show-modal {
+  display: block;
 }
