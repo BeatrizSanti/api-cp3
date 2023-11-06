@@ -16,6 +16,6 @@ export async function POST(request){
 
     dados.usuarios.push(novoUser);
 
-    await fs.writeFile(process.cwd() + '/src/app/dados/adicionar-user/db.json', JSON.stringify(dados));
+    await fs.writeFile(process.cwd() + '/src/app/dados/db.json', JSON.stringify(dados));
     return NextResponse.json({ message: ` ${novoUser.name} adicionado com sucesso!`})
 }
