@@ -11,9 +11,7 @@ export async function POST(request){
         id:dados.usuarios[dados.usuarios.length-1].id+1,
         nome,
         email,
-        telefone,
-        regiao,
-        nascimento
+        telefone
     };
 
     dados.usuarios.push(novoUser);
