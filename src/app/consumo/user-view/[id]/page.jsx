@@ -9,9 +9,9 @@ export default async function page({params}) {
     return (
         <div>
                 <ul key={user.id} >
-                    <li>Nome: {user.name} |</li>
-                    <li>Email: {user.email} |</li>
-                    <li>Telefone: {user.phone} |</li>
+                    <li>Nome: {user.name} </li>
+                    <li>Email: {user.email} </li>
+                    <li>Telefone: {user.phone} </li>
                 </ul>
         </div>
     )
