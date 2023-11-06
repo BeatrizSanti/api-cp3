@@ -77,31 +77,7 @@ const eletros = [
 ];
 
 export async function GET(request,{params}) {
-  // script.js
-
-document.addEventListener('DOMContentLoaded', function () {
-  const images = document.querySelectorAll('.eletro-image');
-
-  const modal = document.createElement('div');
-  modal.className = 'image-modal';
-
-  const modalImage = document.createElement('img');
-  modal.appendChild(modalImage);
-
-  modal.addEventListener('click', function () {
-    modal.classList.remove('show-modal');
-  });
-
-  document.body.appendChild(modal);
-
-  images.forEach(function (image) {
-    image.addEventListener('click', function () {
-      modalImage.src = image.src;
-      modal.classList.add('show-modal');
-    });
-  });
-});
-
+  
 
   const id = params.id;
 
