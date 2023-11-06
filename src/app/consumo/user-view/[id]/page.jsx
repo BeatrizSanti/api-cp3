@@ -17,9 +17,6 @@ export default async function page({params}) {
                     <li>Nome: {user.nome} |</li>
                     <li>Email: {user.email} |</li>
                     <li>Telefone: {user.telefone} |</li>
-                    <li>Região: {user.regiao} |</li>
-                    <li>Data de nascimento: {user.nascimento} |</li>
-                    <li>idade: {idade} </li>
                 </ul>
         </div>
     )
