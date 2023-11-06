@@ -7,12 +7,12 @@ import fs from "fs/promises";
         const arquivo = JSON.parse(file);
         const eletros = arquivo.eletros;         
 
-        const id = params.id
+        const nome = params.id;
 
-        if(id > 0 && id <= eletros.length){
-            return NextResponse.json(eletros.find((eletro=> eletro.id == id)));
+        if(nome != null){
+            return NextResponse.json(eletros.find((eletro=> eletro.nome == nome)));
         } else {
-            return id == 0 ? NextResponse.json(eletros) : NextResponse.redirect("http://localhost:3000/error") 
+            return nome == null ? NextResponse.json(eletros) : NextResponse.redirect("http://localhost:3000/error") 
         }
 
 

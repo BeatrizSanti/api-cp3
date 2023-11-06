@@ -29,7 +29,7 @@ export default async function EletroView() {
                 <ul>
                     {
                         items.map((item)=>(
-                            <Link href={`/consumo/eletro-view/${item.id}`}>
+                            <Link href={`/consumo/eletro-view/${item.nome}`}>
                                 <li key={items.id}>
                                     <h2>{item.nome}</h2>
                                     <figure>
