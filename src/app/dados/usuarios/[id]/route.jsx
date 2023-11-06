@@ -12,7 +12,7 @@ import fs from "fs/promises";
         if(id > 0 && id <= usuarios.length){
             return NextResponse.json(usuarios.find((user=> user.id == id)));
         } else {
-            // Se o ID for inválido ou não existir no array, retorna um erro HTTP 404
+
             return id == 0 ? NextResponse.json(usuarios) : NextResponse.redirect("http://localhost:3000/error") 
         }
 

@@ -12,7 +12,6 @@ import fs from "fs/promises";
         if(id > 0 && id <= eletros.length){
             return NextResponse.json(eletros.find((eletro=> eletro.id == id)));
         } else {
-            // Se o ID for inválido ou não existir no array, retorna um erro HTTP 404
             return id == 0 ? NextResponse.json(eletros) : NextResponse.redirect("http://localhost:3000/error") 
         }
 
